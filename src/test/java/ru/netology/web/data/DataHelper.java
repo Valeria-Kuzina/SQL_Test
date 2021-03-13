@@ -59,7 +59,7 @@ public class DataHelper {
     }
 
     public static String getVerificationCodeForVasya() throws SQLException {
-        val verificationCode = "SELECT code FROM auth_codes WHERE user_id = 1;";
+        val verificationCode = "SELECT code FROM auth_codes ORDER BY created DESC LIMIT 1;";
         try (
                 val conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/app", "app", "pass"
