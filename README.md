@@ -3,7 +3,7 @@
 ### Для запуска
 
 1. docker-compose up
-2. mysql mysql -u app -p app -v 
+2. docker-compose exec mysql mysql -u app -p app -v
 
 пароль: pass
 
